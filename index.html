@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex,follow" />
+	<meta name="description" content="">
+	<title>button test</title>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<!-- <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ja_KS/sdk.js#xfbml=1&version=v2.5&appId=201726786548434";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+ -->
+	<header id="app_header">
+		<h1><img src="img/grad4_logo.png" alt="grad4 logo image"></h1>
+		<h2><!-- <span>YOUR DESIGN ADVISER</span> --><img src="http://tuqulore.com/logo/index.php?color=rgba(255,255,255,.5)" alt="ツクロアのロゴタイプ画像です"></h2>
+	</header>
+	<div class="app_wrapper">
+		<div class="wrap_side">
+
+			<div id="artboard" class="icon_color_picker">
+				
+				<div id="button"><i id="icon_1" class="fa" rel=""></i><span contentEditable>Type_something</span></div>
+			</div>
+
+			<div class="code_wrapper">
+				<div class="uis codebox" id="cdn_code">
+					<section>
+						<h1>CDN</h1>
+						<code contenteditable class="wrap">
+							&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"&gt;
+						</code>
+					</section>
+				</div>
+				<div class="uis codebox" id="html_code">
+					<section>
+						<h1>HTML</h1>
+						<code contenteditable class="wrap"></code>
+					</section>
+				</div>
+				<div class="uis codebox" id="css_code">
+					<section>
+						<h1>CSS</h1>
+						<code contenteditable class="wrap"></code>
+					</section>
+				</div>
+			</div>
+
+
+			<!-- <div class="sns_area">
+				<ul>
+					<li>
+						<div class="fb-like" data-href="http://grad4.tuqulore.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+					</li>
+					<li>
+						<a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://grad4.tuqulore.com/" data-via="tuqulore" data-hashtags="tuquore_grad4">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</li>
+					<li>
+						<a href="http://b.hatena.ne.jp/entry/http://grad4.tuqulore.com/" class="hatena-bookmark-button" data-hatena-bookmark-title="Grad4 CSS button generator by tuqulore" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+					</li>
+					<li>
+						<a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+						<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+					</li>
+				</ul>
+				
+			</div> -->
+
+		</div>
+		
+		
+		<div class="uis" id="button_ui">
+			<section id="params_gradient">
+				<h1>gradient(background-image)</h1>
+					<div class="wrap">
+						<p>
+							<label><input type="radio" name="grad_type" value="linear" id="grad_type_linear" checked><i class="sprite linear"></i>linear</label>
+							<label><input type="radio" name="grad_type" value="radial" id="grad_type_radial"><i class="sprite radial"></i>radial</label>
+
+							<label><button id="btn_reverse"><i class="sprite reverse"></i></button>reverse</label>
+						</p>
+						<p class="type_linear_params">
+							<label>Direction: <input type="range" id="grad_rotation" min="0" max="360" value="0"></label>
+						</p>
+						<p class="type_radial_params">
+							<label>X: <input type="number" id="grad_x" min="0" max="100" value="50"> %</label>
+							<label>Y: <input type="number" id="grad_y" min="0" max="100" value="50"> %</label>
+							<label>radius: <input type="range" id="grad_radius" min="0" max="300" value="100"></label>
+						</p>
+						<div class="grad_bar_wrap">
+							<div class="grad_bar_wrap_inner">
+								<p id="ui_cs1" class="icon_cs">
+									<label class="color_picker_wrapper">
+										<span id="grad_colorStopColor1" style="background-color: #bc0000;" class="icon_color_picker"></span>
+									</label>
+								</p>
+								<p id="ui_cs1" class="icon_cs">
+									<label class="color_picker_wrapper">
+										<span id="grad_colorStopColor2" style="background-color: #ff0000;" class="icon_color_picker"></span>
+									</label>
+								</p>
+							</div>
+							<div class="ui_grad_bar_wrapper">
+								<div id="ui_grad_bar"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Gradient Sample</h1>
+					<div class="wrap">
+						<div class="hue_bar_wrapper">
+							<div class="hue_bar"></div>
+							<div class="hue_handle"></div>
+						</div>
+						<div class="sl_bars">
+							<label><span>Saturation:</span><input min="0" max="100" value="100" type="range" class="saturation_bar"></label>
+							<label><span>Lightness:</span><input min="0" max="100" value="50" type="range" class="lightness_bar"></label>
+						</div>
+						<div class="sample_list">
+							<ul>
+								<li/><li/><li/><li/><li/>
+								<li/><li/><li/><li/><li/>
+								<li/><li/><li/><li/><li/>
+								<li/><li/><li/><li/><li/>
+								<li/><li/><li/><li/><li/>
+							</ul>
+						</div>
+					</div>
+						
+				</section>
+
+			<section class="hide_params">
+				<h1><label>border<input type="checkbox" id="border_enable"></label></h1>
+				<div class="wrap">
+					<p>
+						<label class="color_picker_wrapper">
+							<span id="border_color" style="background-color: #333333;" class="icon_color_picker"></span>
+						</label>
+						<label>border-width: <input type="number" id="border_width" min="1" value="1"></label>
+					</p>
+				</div>
+			</section>
+
+			<section class="hide_params">
+				<h1><label>box-shadow<input type="checkbox" id="shadow_enable"></label></h1>
+				<div class="wrap">
+					<p>
+						<label class="color_picker_wrapper">
+							<span id="shadow_color" style="background-color: #cccccc;" class="icon_color_picker"></span>
+						</label>
+						<label>X: <input type="number" id="shadow_x" value="0"></label>
+						<label>Y: <input type="number" id="shadow_y" value="1"></label>
+						<label>blur: <input type="number" id="shadow_blur" value="2"></label>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h1><label>border-radius<input type="checkbox" id="radius_enable" checked></label></h1>
+				<div class="wrap">
+					<p>
+						<label><input type="radio" name="radius_type" value="all" id="radius_type_all" checked><i class="sprite radius_all"></i></label>
+						<label><input type="radio" name="radius_type" value="upper" id="radius_type_upper"><i class="sprite radius_upper"></i></label>
+						<label><input type="radio" name="radius_type" value="lower" id="radius_type_lower"><i class="sprite radius_lower"></i></label>
+						<label>radius: <input type="number" id="radius_value" min="1" value="3"></label>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h1>padding</h1>
+				<div class="wrap">
+					<p>
+						<label>vertical: <input type="number" id="padding_vertical" step="0.1" value=".8"></label>
+						<label>horizontal: <input type="number" id="padding_horizontal" step="0.1" value="1.6"></label>
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<div class="text_ui_search_container">
+			<div id="icon_search" class="uis">
+				<section>
+					<h1>Icon Search</h1>
+					<div class="wrap">
+						<label class="kw_wrap"><input placeholder="icon keywords" type="text" id="kw"><i id="icon_1" class="fa fa-search"></i></label>
+						<div id="suggest" style="display:none;"></div>
+						<div id="result_icons"></div>
+					</div>
+				</section>
+
+				<section id="icon_only_setting" class="hide_params">
+					<h1><label>Icon<input type="checkbox" id="icon_enable"></label></h1>
+					<div class="wrap">
+						<p><label>size: <input id="icon_size" type="number" min=".8" value="1.0" max="2.5" step=".1">em</label>
+						<label>margin: <input id="icon_margin" type="number" min="0" value=".2" max="2.5" step=".1">em</label></p>
+						<p>
+							<label><input type="radio" name="icon_side" value="left" id="icon_side_left" checked><i class="sprite iconside_left"></i></label>
+							<label><input type="radio" name="icon_side" value="right" id="icon_side_left"><i class="sprite iconside_right"></i></label>
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<div class="uis" id="text_ui">
+				<section>
+					<h1>font</h1>
+					<div class="wrap">
+						<p>font-family: 
+							<select id="font_fontfamily">
+								<option selected value="sans-serif">sans-serif</option>
+								<option value="serif">serif</option>
+								<option value="monospace">monospace</option>
+							</select>
+						</p>
+						<p>
+							<label>size: <input id="font_size" type="number" min=".8" value="1" max="2.5" step=".1">em</label><label>bold: <input id="font_bold" type="checkbox" checked></label>
+							color(text color): <label class="color_picker_wrapper">
+								<span id="font_color" style="background-color: #fff;" class="icon_color_picker"></span>
+							</label>
+						</p>
+					</div>
+				</section>
+
+				<section class="hide_params">
+					<h1><label>text-shadow<input type="checkbox" id="textshadow_enable"></label></h1>
+					<div class="wrap">
+						<p>
+							<label class="color_picker_wrapper">
+								<span id="textshadow_color" style="background-color: #fff;" class="icon_color_picker"></span>
+							</label>
+							
+							<label>X: <input type="number" id="textshadow_x" value="0"></label>
+							<label>Y: <input type="number" id="textshadow_y" value="1"></label>
+							<label>blur: <input type="number" id="textshadow_blur" value="2"></label>
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<div class="uis" id="socialShare">
+				<section>
+					<h1>Social Share</h1>
+					<div class="wrap">
+						<div class="img_croud">
+							<i class="fa fa-cloud imgicon"></i>
+							<p class="share_count"></p>
+						</div>
+						<i class="fa fa-arrow-up imgicon"></i>
+						<div class="sharebtn_container">
+							<button class="" id="doSocialShare"><img />SHARE BY <span></span></button>
+							<button href="#" id="twitter_login"><i class="fa fa-twitter"></i>TWITTER LOGIN</button>
+						</div>
+						
+					</div>
+				</section>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="sharedGallery">
+		<section>
+			<h1>SHARED GALLERY</h1>
+			<ul></ul>
+		</section>
+	</div>
+	
+	<!-- <p><br><br><br><br><br><br><br>
+		<button id="gallery_test">test</button></p>
+ -->
+	<div class="corporate_brand">
+		<img src="http://tuqulore.com/logo/index.php?color=rgba(255,255,255,.5)" alt="ツクロアのロゴタイプ画像です">
+		<div class="corp_policy">
+			<p>トリセツのいらないデザイン</p>
+			<p>株式会社 ツクロア</p>
+		</div>
+	</div>
+	
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="jqColorPicker.min.js"></script>
+	<script src="App.js"></script>
+	<script src="classname_search.js"></script>
+	<script src="ButtonDesignEngine.js"></script>
+	<script src="TextDesignEngine.js"></script>
+	<script src="ColorSample.js"></script>
+	<script src="suggest.js"></script>
+	<script src="code2data.js"></script>
+	<script src="SocialShare.js"></script>
+	<script>
+		var sc = new classNameSearch()
+	</script>
+	<div id="overlay">
+		<div class="floatBox">
+			<div class="floatBox_inner"></div>
+		</div>
+	</div>
+</body>
+</html>

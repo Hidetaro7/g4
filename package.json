@@ -1,0 +1,28 @@
+{
+  "name": "g4-gulp",
+  "version": "1.0.0",
+  "description": "g4",
+  "main": "index.js",
+  "scripts": {
+    "start": "mongod --dbpath /data/db & node server.js & gulp"
+  },
+  "keywords": [
+    "gulp",
+    "test"
+  ],
+  "author": "tuqulore",
+  "license": "(ISC)MIT",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-plumber": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "dependencies": {
+    "mongodb": "^2.0.52",
+    "mongoose": "^4.3.3"
+  }
+}

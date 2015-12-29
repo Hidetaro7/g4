@@ -1,0 +1,42 @@
+#artboard {
+  margin: auto; }
+
+#app_header h1 {
+  margin: 0;
+  position: absolute;
+  top: 2px;
+  left: 2px; }
+#app_header img {
+  width: 180px; }
+
+.text_ui_search_container {
+  position: absolute;
+  width: 280px;
+  left: 2px;
+  top: 2px; }
+
+#text_ui {
+  width: 280px; }
+
+#button_ui {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 280px; }
+
+#icon_search {
+  width: 280px;
+  margin-bottom: 2px; }
+
+.code_wrapper {
+  position: absolute;
+  bottom: 2px;
+  left: 2px; }
+
+#color_sample {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 280px; }
+
+/*# sourceMappingURL=layout.css.map */

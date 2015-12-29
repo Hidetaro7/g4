@@ -1,0 +1,8 @@
+[
+	{"id": "envelope", "reserve": ["email", "mail", "e-mail", "メール", "e-メール", "お問い合わせ", "問い合わせ", "問合せ"]},
+	{"id": "building", "reserve": ["corporate", "company", "会社", "会社案内", "案内", "企業"]},
+	{"id": "plane", "reserve": ["送信", "送る"]},
+	{"id": "home", "reserve": ["ホーム", "トップ", "top"]},
+	{"id": "bars", "reserve": ["menu", "メニュー"]}
+
+]
